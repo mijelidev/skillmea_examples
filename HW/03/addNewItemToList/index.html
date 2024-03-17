@@ -21,10 +21,9 @@
 		<section class="cards">
 
 			<form id="addItemForm">
-				<label for="itemName">Název položky:</label>
-				<input type="text" id="itemHeader"><br>
-				<label for="itemDescription">Popis položky:</label>
-				<input type="text" id="itemContent"><br>
+				<input type="text" id="itemHeader" placeholder="Nadpis"><br>
+
+				<textarea id="itemContent"rows="5" cols="33" placeholder="Content"></textarea><br>
 				<button type="button" onclick="addItemToList()">Přidat položku</button>
 			</form>
 			<button onclick="cloneElement()">Klonovat prvek</button>
