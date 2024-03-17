@@ -4,7 +4,7 @@ function plus() {
   let one = prompt("Zadej první číslo:"),
     two = prompt("Zadej druhé číslo:");
 
-    result = parseInt(one) + parseInt(two);
+    result = Number(one) + Number(two);
 
   return main(result);
 }

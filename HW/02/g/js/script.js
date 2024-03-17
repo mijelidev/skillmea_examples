@@ -12,8 +12,8 @@ function formatSum(cislo) {
 
 
 function discount() {
-  let sale = parseInt( prompt("Sleva :") ),
-    price = parseInt( prompt("Cena:") );
+  let sale = Number( prompt("Sleva :") ),
+    price = Number( prompt("Cena:") );
 
     sum =  ( price / 100 * sale);
 

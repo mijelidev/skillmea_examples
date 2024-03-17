@@ -15,7 +15,7 @@ function plus() {
   let quantity = prompt("Zadej počet kusů :"),
       price = prompt("Zadej cena za kus:");
 
-    sum =  parseInt(quantity) * parseInt(price);
+    sum =  Number(quantity) * Number(price);
 
   return main(sum, quantity);
 }

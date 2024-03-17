@@ -1,7 +1,7 @@
-console.log('Uloha 02 - g');
+console.log('Uloha 02 - h');
 
 
-function formatSum(cislo, currency) {
+function formatSum(numberFormat, currency) {
 
    let  formatLocality = "",
         formatCurrent = "";
@@ -21,12 +21,12 @@ switch (currency) {
 }
 
 
-  cislo = cislo.toLocaleString(formatLocality, {
+  numberFormat = numberFormat.toLocaleString(formatLocality, {
     style: "currency",
     currency: formatCurrent,
   });
 
-  return cislo;
+  return numberFormat;
 }
 
 
