@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRID LAYOUT</title>
+	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/cards.css">
+</head>
+
+<body>
+
+	<header>
+		<img src="./images/header-playdate-dev.png" alt="anyone can make games">
+	</header>
+
+	<main>
+		<section class="cards">
+			<ul>
+				<li class="sdk">
+					<h3>Playdate SDK</h3>
+
+					<p>
+						Our full development environment, available for Mac, PC, and Linux.
+						Includes Lua and C APIs, as well as a Simulator for
+						local development, with profiling and more.
+					</p>
+				</li>
+
+				<li class="inside">
+					<h3>Inside Playdate</h3>
+
+					<p>
+						Reference documentation for programming Playdate games.
+						Covers both <strong>Lua</strong> and <strong>C</strong> programming.
+					</p>
+				</li>
+
+				<li class="caps">
+					<h3>Caps</h3>
+
+					<p>
+						Bitmap font editor for Playdate fonts—draw your own characters,
+						import desktop fonts, kern and preview them.
+					</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<script>
+		/**
+		 * ULOHA 02 d)
+		 *
+		 * nie každá naša funkcia bude konciť príkazom return
+		 * ale väčšina našich funkcí bude konciť príkazom return
+		 *
+		 * return takzvane "vráti výsledok" do kódu
+		 * return vráti hodnotu na to miesto, kde funkciu voláme
+		 *
+		 * v našom prípade to znamená, že:
+		 * na to miesto v kóde, kde mám "plus(5, 5.5)" sa vráti hodnota "10.5"
+		 *
+		 * čiže tam, kde som napísal "plus(5, 5.5)" ako keby som napísal "10.5"
+		 *
+		 * IBA AK vo funkcii použiješ return
+		 * TAK sa na miesto, kde funkciu používaš, vráti výsledok
+		 */
+		function plus(a, b) {
+			return a + b;
+		}
+
+		// -------------------------
+
+		let result = plus(5, 5.5);
+
+		console.log(result);
+	</script>
+
+</body>
+
+</html>

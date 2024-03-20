@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRID LAYOUT</title>
+	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/cards.css">
+</head>
+
+<body>
+
+	<header>
+		<img src="./images/header-playdate-dev.png" alt="anyone can make games">
+	</header>
+
+	<main>
+		<section class="cards">
+			<ul>
+				<li class="sdk">
+					<h3>Playdate SDK</h3>
+
+					<p>
+						Our full development environment, available for Mac, PC, and Linux.
+						Includes Lua and C APIs, as well as a Simulator for
+						local development, with profiling and more.
+					</p>
+				</li>
+
+				<li class="inside">
+					<h3>Inside Playdate</h3>
+
+					<p>
+						Reference documentation for programming Playdate games.
+						Covers both <strong>Lua</strong> and <strong>C</strong> programming.
+					</p>
+				</li>
+
+				<li class="caps">
+					<h3>Caps</h3>
+
+					<p>
+						Bitmap font editor for Playdate fonts—draw your own characters,
+						import desktop fonts, kern and preview them.
+					</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<script>
+		/**
+		 * ULOHA 02 h)
+		 *
+		 * pointa tejto úlohy je vyskúšať si PODMIENKY (if else)
+		 * a tzv. DEFAULT PARAMETRE
+		 * alebo prednastavené hodnoty
+		 *
+		 * PODMIENKY sú klasika programovania
+		 * AK platí vec, spustíme jeden kus kódu
+		 * AK neplatí, spustíme druhý kus kódu
+		 *
+		 * v tomto prípade AK currency JE 'usd'
+		 * tak spustíme kód, ktorý číslo naformátuje na doláre
+		 *
+		 * všetky ostatné VETVY budú odignorované
+		 * v tomto príklade: if je jedna veta, else if je druhá vetva, else je tretia vetva
+		 *
+		 * currency = 'czk' znamená, že AK nepošlem žiadnu hodnotu,
+		 * tak sa do premennej currency uloží hodnota 'czk'
+		 */
+		function financial (number, currency = 'czk') {
+			if (currency === 'usd') {
+				number = number.toLocaleString('en-US', {
+					style: 'currency',
+					currency: 'USD'
+				});
+			}
+			else if (currency === 'eur') {
+				number = number.toLocaleString('sk-SK', {
+					style: 'currency',
+					currency: 'EUR'
+				});
+			}
+			else {
+				number = number.toLocaleString('cs-CZ', {
+					style: 'currency',
+					currency: 'CZK'
+				});
+			}
+
+			return number;
+		}
+
+		// -------------------------
+
+		// v currency bude 'eur'
+		console.log(
+			financial(1235.45, 'eur')
+		);
+
+		// v currency bude 'usd'
+		console.log(
+			financial(1235.45, 'usd')
+		);
+
+		// v currency bude 'czk'
+		console.log(
+			financial(1235.45, 'czk')
+		);
+
+		// v currency bude 'czk'
+		console.log(
+			financial(1235.45)
+		);
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRID LAYOUT</title>
+	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/cards.css">
+</head>
+
+<body>
+
+	<header>
+		<img src="./images/header-playdate-dev.png" alt="anyone can make games">
+	</header>
+
+	<main>
+		<section class="cards">
+			<ul>
+				<li class="sdk">
+					<h3>Playdate SDK</h3>
+
+					<p>
+						Our full development environment, available for Mac, PC, and Linux.
+						Includes Lua and C APIs, as well as a Simulator for
+						local development, with profiling and more.
+					</p>
+				</li>
+
+				<li class="inside">
+					<h3>Inside Playdate</h3>
+
+					<p>
+						Reference documentation for programming Playdate games.
+						Covers both <strong>Lua</strong> and <strong>C</strong> programming.
+					</p>
+				</li>
+
+				<li class="caps">
+					<h3>Caps</h3>
+
+					<p>
+						Bitmap font editor for Playdate fonts—draw your own characters,
+						import desktop fonts, kern and preview them.
+					</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<script>
+		function naformatujSumu(cislo) {
+			cislo = cislo.toLocaleString('cs-CZ', {
+				style: 'currency',
+				currency: 'CZK'
+			});
+
+			return cislo;
+		}
+
+		function pozdrav(meno, priezvisko) {
+			if (priezvisko) {
+				alert('Ahoj ' + meno + ' ' + priezvisko);
+			}
+		}
+
+		// ------------------
+
+		let celkovaSumaKosika = 142123211.1245266;
+			
+		console.log(
+			'Zaplať mi ' + naformatujSumu(celkovaSumaKosika)
+		);
+
+		console.log(
+			'Suma: ' + naformatujSumu(celkovaSumaKosika)
+		);
+
+		console.log(
+			'Cena s DPH: ' + naformatujSumu(celkovaSumaKosika)
+		);
+
+		// ------------------
+
+		pozdrav('Vašo', 'Patejdl');
+		pozdrav('Ewa', '🥰');
+		pozdrav('Kamil');
+
+		let score = 0;
+
+		score = score + 1;
+		score += 1;
+		score++;
+
+		let meno = 'Vašo';
+		let priezvisko = 'Patejdl';
+
+		console.log( meno.repeat(4) );	
+	</script>
+  
+</body>
+
+</html>

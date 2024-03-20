@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRID LAYOUT</title>
+	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/cards.css">
+</head>
+
+<body>
+
+	<header>
+		<img src="./images/header-playdate-dev.png" alt="anyone can make games">
+	</header>
+
+	<main>
+		<section class="cards">
+			<ul>
+				<li class="sdk">
+					<h3>Playdate SDK</h3>
+
+					<p>
+						Our full development environment, available for Mac, PC, and Linux.
+						Includes Lua and C APIs, as well as a Simulator for
+						local development, with profiling and more.
+					</p>
+				</li>
+
+				<li class="inside">
+					<h3>Inside Playdate</h3>
+
+					<p>
+						Reference documentation for programming Playdate games.
+						Covers both <strong>Lua</strong> and <strong>C</strong> programming.
+					</p>
+				</li>
+
+				<li class="caps">
+					<h3>Caps</h3>
+
+					<p>
+						Bitmap font editor for Playdate fonts—draw your own characters,
+						import desktop fonts, kern and preview them.
+					</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<script>
+		/**
+		 * ULOHA 02 e)
+		 *
+		 * učili sme sa o DÁTOVÝCH TYPOCH
+		 * 10 je Number, pretože 10 je číslo
+		 * ale "10" je String, rovnako ako "Vašo" je String
+		 *
+		 * sú situácie, kedy z jedného dátového typu musíme spraviť iný
+		 * napríklad zmeniť String na Number
+		 *
+		 * aha
+		 */
+		function plus(a, b) {
+			return a + b;
+		}
+
+		// -------------------------
+
+		// ak nechceš, nemusíš do premenných okamžite uložiť hodnotu
+		// tu som si vytvoril 2 nové premenné, ale zatiaľ sú prázdne
+		let firstNumber;
+		let secondNumber;
+
+		// ak teraz zadám 10 a 5
+		firstNumber = prompt('Prvé číslo:');
+		secondNumber = prompt('Druhé číslo:');
+
+		// namiesto súčtu sa mi vráti "105"
+		console.log(
+			plus( firstNumber, secondNumber )
+		);
+
+		// pretože funkcia prompt() vracia String
+		// my vieme, že ak spravím "Vašo" + "Patejdl" dostanem "VašoPatejdl"
+		// rovnako ak spravím "10" + "5" dostanem "105"
+		// tie úvodzovky znamenajú String
+
+		// ja z "10" potrebujem spraviť 10
+		// zo Stringu spraviť Number
+		// napríklad takto
+
+		// ak zadám 10 a 5
+		firstNumber = Number( prompt('Prvé číslo:') );
+		secondNumber = Number( prompt('Druhé číslo:') );
+
+		// dostanem konečne 15
+		// pretože Number("10") vráti 10, zo Stringu spraví číslo
+		// a 10 + 5 = 15
+		console.log(
+			plus(firstNumber, secondNumber)
+		);
+
+		// niektorí z vás namiesto Number() použili parseInt()
+		// to NEFUNGUJE s desatinnými číslami 🙂
+		// int znamená INTEGER a INTEGER v angličtine znamená CELÉ ČÍSLO
+	</script>
+
+</body>
+
+</html>
