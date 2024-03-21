@@ -1,0 +1,44 @@
+.form{
+  padding-bottom: .3rem;
+}
+
+.form input[type=text]{
+    width:100%;
+   border:1px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    font-size: 1.1em;
+  }
+
+  .form input[type=text]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+
+  .form button{
+    font-size: 1.2rem;
+    background-color: green;
+    color: #fff;
+    border-radius: .2rem;
+    border: none;
+    padding: .3rem .5rem;
+     outline:none;
+     display: none;
+  }
+
+  .form .errorMessage{
+    display: none;
+    padding: .2rem .6rem;
+    background-color: red;
+    border-radius: .3rem;
+    margin-top: .2rem;
+  }
+
+  .form .errorMessage p{
+    color: #000;
+  }
+
