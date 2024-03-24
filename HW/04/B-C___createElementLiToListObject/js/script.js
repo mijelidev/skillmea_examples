@@ -68,18 +68,11 @@ function viewErrorMessage(message, location = ".form .errorMessage") {
  * Reset dat v Form
  */
 function resetInputData() {
-   let  inputs = document.querySelectorAll(".form input"),
-        textareas = document.querySelectorAll(".form textarea");
+   let inputs = document.querySelectorAll(".form input, .form textarea");
 
      if (inputs){
        inputs.forEach((input) => {
          input.value = "";
-       });
-     }
-
-     if (textareas) {
-       textareas.forEach((textarea) => {
-         textarea.value = "";
        });
      }
   }
